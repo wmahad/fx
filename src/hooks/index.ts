@@ -42,7 +42,7 @@ export const useFxRate = (base: string, target: string) => {
     onSuccess(rate) {
       queryClient.setQueryData(
         ["fx-rate", target, base],
-        1 / Number.parseFloat(rate)
+        `${1 / Number.parseFloat(rate)}`
       );
     },
   });
